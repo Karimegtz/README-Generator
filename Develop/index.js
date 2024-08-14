@@ -1,5 +1,5 @@
 // TODO: Include packages needed for this application
-const generateMarkdown = requiere("./utils/generateMarkdown.js");
+const generateMarkdown = require("./utils/generateMarkdown.js");
 const inquirer= require ("inquirer");
 const fs =require("fs");
 // TODO: Create an array of questions for user input
@@ -58,7 +58,7 @@ function init() {
   .prompt(questions)
   .then((answers) => {
 
-    writeToFile("Develop/newReadme/readme.md", answers)
+    writeToFile("./newReadme/readme.md", answers)
 
     // Use user feedback for... whatever!!
   })
